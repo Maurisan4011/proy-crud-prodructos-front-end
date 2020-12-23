@@ -2,12 +2,12 @@ const url = 'http://localhost:8085/producto';
 const urlproductos= 'http://localhost:8085/productos';
 
 // Cuando se crea un nuevo Producto
-export const nuevoProducto = async cliente => {
+export const nuevoProducto = async producto => {
 
     try {
         await fetch(url, {
             method: 'POST',
-            body: JSON.stringify( cliente ),
+            body: JSON.stringify( producto ),
             headers: {
                 'Content-Type': 'application/json'
             }
